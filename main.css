@@ -28,6 +28,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
+  align-items: center;
 }
 
 .box__input input {
@@ -93,4 +94,15 @@ body {
 .main__task p {
   width: 100%;
   padding: 5px;
+}
+
+@media (max-width: 370px) {
+  .box__input {
+    width: 100%;
+    flex-grow: 0;
+    margin: 0 auto;
+  }
+  .box__input input {
+    width: 95%;
+  }
 }
