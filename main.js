@@ -24,7 +24,6 @@ function reRenderList(tasks) {
       (infor) => `
           <div class ="list__item">
             <div class = "main__task">
-              <div><i class="fa-regular fa-bell" style = "padding-right: 10px;color: green"></i><strong>${infor.name}</strong></div>
               <p><i class="fa-solid fa-comment"  style = "padding-right: 10px;color: blue""></i>${infor.content}</p>
             </div>
             <div class = "remove__task" onclick = "handleDeleteTask(${infor.id})">
@@ -63,7 +62,7 @@ function handleValueUserByButton() {
       // name: ten.value,
       content: noiDung.value,
     };
-    if (ten !== "" && noiDung !== "") {
+    if (noiDung !== "") {
       createTask(taskForm);
     }
     // ten.value = " ";
