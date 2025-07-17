@@ -4,7 +4,7 @@
 //     console.log(data[0].name);
 //   });
 
-const taskApi = "https://todo-list-api-whgl.onrender.com/group2";
+const taskApi = "https://todo-list-api-whgl.onrender.com/group1";
 var time = new Date();
 console.log(time.getMinutes());
 
