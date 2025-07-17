@@ -14,11 +14,13 @@ function start() {
 }
 start();
 function getTasks(callback) {
-  setInterval(() => {
-    fetch(taskApi)
-      .then((response) => response.json())
-      .then(callback);
-  }, 2000);
+  setTimeout(() => {
+    setInterval(() => {
+      fetch(taskApi)
+        .then((response) => response.json())
+        .then(callback);
+    }, 2000);
+  }, 1000);
 }
 function reRenderList(tasks) {
   var containList = document.querySelector(".list__task");
