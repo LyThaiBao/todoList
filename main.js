@@ -4,7 +4,7 @@
 //     console.log(data[0].name);
 //   });
 
-const taskApi = "https://todo-list-api-whgl.onrender.com";
+const taskApi = "https://todo-list-api-whgl.onrender.com/listTasks";
 function start() {
   getTasks(reRenderList);
   handleValueUserByButton();
@@ -35,7 +35,7 @@ function reRenderList(tasks) {
   containList.innerHTML = information;
 }
 
-function createTask(data, callback) {
+function createTask(data) {
   var option = {
     method: "POST",
     headers: {
@@ -45,7 +45,9 @@ function createTask(data, callback) {
   };
   fetch(taskApi, option)
     .then((response) => response.json())
-    .then(callback)
+    .then(() => {
+      getTasks(reRenderList);
+    })
     .catch((Error) => console.log("Khong them được"));
 }
 
@@ -53,15 +55,17 @@ function handleValueUserByButton() {
   var btnAdd = document.querySelector(".add__task");
   btnAdd.addEventListener("click", (e) => {
     e.preventDefault();
-    var ten = document.querySelector('input[name="name"]').value;
-    var noiDung = document.querySelector('input[name="content"]').value;
+    var ten = document.querySelector('input[name="name"]');
+    var noiDung = document.querySelector('input[name="content"]');
     var taskForm = {
-      name: ten,
-      content: noiDung,
+      name: ten.value,
+      content: noiDung.value,
     };
     if (ten !== "" && noiDung !== "") {
-      createTask(taskForm, getTasks(reRenderList));
+      createTask(taskForm);
     }
+    ten.value = " ";
+    noiDung.value = " ";
   });
 }
 
@@ -74,5 +78,7 @@ function handleDeleteTask(id) {
   };
   fetch(taskApi + "/" + id, option)
     .then((response) => response.json())
-    .then(() => {});
+    .then(() => {
+      getTasks(reRenderList);
+    });
 }
