@@ -16,6 +16,11 @@ body {
   margin: 0 auto;
   padding: 20px 1rem;
   min-height: 50vh;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .title {
   font-size: 3rem;
@@ -79,8 +84,13 @@ body {
   margin-top: 10px;
 }
 .list__task {
-  width: 100%;
-  position: relative;
+  height: 400px;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: end; */
+  align-content: flex-end;
 }
 .list__item {
   width: 100%;
