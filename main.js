@@ -65,7 +65,7 @@ function handleValueUserByButton() {
     var taskForm = {
       time: `${new Date().getDate()}/${
         new Date().getMonth() + 1
-      }/${new Date().getDay()}`,
+      }/${new Date().getFullYear()}`,
       content: noiDung.value,
     };
     if (noiDung !== "") {
