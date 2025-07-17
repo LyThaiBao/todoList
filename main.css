@@ -79,8 +79,9 @@ body {
   margin-top: 10px;
 }
 .list__task {
-  width: 100%;
-  position: relative;
+  height: 300px; /* hoặc bất kỳ giá trị nào */
+  overflow-y: scroll;
+  padding-bottom: 10px;
 }
 .list__item {
   width: 100%;

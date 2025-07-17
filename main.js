@@ -65,14 +65,21 @@ function handleValueUserByButton() {
     var taskForm = {
       time: `${new Date().getDate()}/${
         new Date().getMonth() + 1
-      }/${new Date().getFullYear()}`,
+      }/${new Date().getFullYear()}<i class="fa-solid fa-clock" style = "padding-left:5px"></i> ${new Date().getHours()}:${new Date().getMinutes()}`,
       content: noiDung.value,
     };
-    if (noiDung !== "") {
+
+    if (noiDung.value !== "") {
       createTask(taskForm);
     }
     // ten.value = " ";
-    noiDung.value = " ";
+    noiDung.value = "";
+    noiDung.focus();
+    setTimeout(() => {
+      // đợi DOM cập nhật xong hết mới cuộn
+      var boxList = document.querySelector(".list__task");
+      boxList.scrollTop = boxList.scrollHeight; // tự động scoll xuống
+    }, 1100);
   });
 }
 
