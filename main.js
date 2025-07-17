@@ -86,7 +86,7 @@ function handleValueUserByButton() {
         // đợi DOM cập nhật xong hết mới cuộn
         var boxList = document.querySelector(".list__task");
         boxList.scrollTop = boxList.scrollHeight; // tự động scoll xuống
-      }, 1100);
+      }, 2000);
     }
     // ten.value = " ";
     noiDung.value = "";
