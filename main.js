@@ -8,6 +8,15 @@ const taskApi = "https://todo-list-api-whgl.onrender.com/group2";
 var time = new Date();
 console.log(time.getMinutes());
 
+// function autoScrollWeb() {
+//   setInterval(() => {
+//     // đợi DOM cập nhật xong hết mới cuộn
+//     var boxList = document.querySelector(".list__task");
+//     boxList.scrollTop = boxList.scrollHeight; // tự động scoll xuống
+//   }, 10000);
+// }
+
+// autoScrollWeb();
 function start() {
   getTasks(reRenderList);
   handleValueUserByButton();
@@ -73,15 +82,15 @@ function handleValueUserByButton() {
 
     if (noiDung.value !== "") {
       createTask(taskForm);
+      setTimeout(() => {
+        // đợi DOM cập nhật xong hết mới cuộn
+        var boxList = document.querySelector(".list__task");
+        boxList.scrollTop = boxList.scrollHeight; // tự động scoll xuống
+      }, 1100);
     }
     // ten.value = " ";
     noiDung.value = "";
     noiDung.focus();
-    setTimeout(() => {
-      // đợi DOM cập nhật xong hết mới cuộn
-      var boxList = document.querySelector(".list__task");
-      boxList.scrollTop = boxList.scrollHeight; // tự động scoll xuống
-    }, 1100);
   });
 }
 
