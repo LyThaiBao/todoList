@@ -5,6 +5,9 @@
 //   });
 
 const taskApi = "https://todo-list-api-whgl.onrender.com/group2";
+var time = new Date();
+console.log(time.getMinutes());
+
 function start() {
   getTasks(reRenderList);
   handleValueUserByButton();
@@ -25,6 +28,7 @@ function reRenderList(tasks) {
           <div class ="list__item">
             <div class = "main__task">
               <p><i class="fa-solid fa-comment"  style = "padding-right: 10px;color: blue""></i>${infor.content}</p>
+              <small class= "time">${infor.time}</small>
             </div>
             <div class = "remove__task" onclick = "handleDeleteTask(${infor.id})">
             <i class="fa-solid fa-trash"></i>
@@ -59,7 +63,9 @@ function handleValueUserByButton() {
     // var ten = document.querySelector('input[name="name"]');
     var noiDung = document.querySelector('input[name="content"]');
     var taskForm = {
-      // name: ten.value,
+      time: `${new Date().getDate()}/${
+        new Date().getMonth() + 1
+      }/${new Date().getDay()}`,
       content: noiDung.value,
     };
     if (noiDung !== "") {
