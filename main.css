@@ -79,7 +79,7 @@ body {
   margin-top: 10px;
 }
 .list__task {
-  height: 300px; /* hoặc bất kỳ giá trị nào */
+  height: 300px;
   overflow-y: scroll;
   padding-bottom: 10px;
 }
