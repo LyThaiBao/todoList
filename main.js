@@ -4,7 +4,7 @@
 //     console.log(data[0].name);
 //   });
 
-const taskApi = "https://todo-list-api-whgl.onrender.com/group1";
+const taskApi = "https://todo-list-api-whgl.onrender.com/group2";
 function start() {
   getTasks(reRenderList);
   handleValueUserByButton();
@@ -57,16 +57,16 @@ function handleValueUserByButton() {
   var btnAdd = document.querySelector(".add__task");
   btnAdd.addEventListener("click", (e) => {
     e.preventDefault();
-    var ten = document.querySelector('input[name="name"]');
+    // var ten = document.querySelector('input[name="name"]');
     var noiDung = document.querySelector('input[name="content"]');
     var taskForm = {
-      name: ten.value,
+      // name: ten.value,
       content: noiDung.value,
     };
     if (ten !== "" && noiDung !== "") {
       createTask(taskForm);
     }
-    ten.value = " ";
+    // ten.value = " ";
     noiDung.value = " ";
   });
 }
