@@ -1,7 +1,14 @@
 {
-  "listTasks": [
+  "group1": [
     {
       "id": 1,
+      "name": "kjnkjnkjnjkn",
+      "content": "nkjnkjnjkn"
+    }
+  ],
+  "group2": [
+    {
+      "id": 2,
       "name": "kjnkjnkjnjkn",
       "content": "nkjnkjnjkn"
     }

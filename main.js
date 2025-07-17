@@ -4,7 +4,7 @@
 //     console.log(data[0].name);
 //   });
 
-const taskApi = "https://todo-list-api-whgl.onrender.com/listTasks";
+const taskApi = "https://todo-list-api-whgl.onrender.com/group1";
 function start() {
   getTasks(reRenderList);
   handleValueUserByButton();
@@ -15,7 +15,7 @@ function getTasks(callback) {
     fetch(taskApi)
       .then((response) => response.json())
       .then(callback);
-  }, 1000);
+  }, 2000);
 }
 function reRenderList(tasks) {
   var containList = document.querySelector(".list__task");
