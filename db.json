@@ -8,9 +8,16 @@
   ],
   "group2": [
     {
-      "id": 2,
+      "id": 1,
       "name": "g2",
       "content": "nkjnkjnjkn"
+    }
+  ],
+  "article": [
+    {
+      "id": 1,
+      "status": "to day my feel not well",
+      "image": "../img/img/Screenshot 2025-06-07 111214.png"
     }
   ]
 }
