@@ -17,7 +17,7 @@
     {
       "id": 1,
       "status": "to day",
-      "image": "./img/thumb1.png"
+      "image": "img/thumb1.png"
     }
   ]
 }
